@@ -1,0 +1,15 @@
+What happens if the designers of the Storage class decide to change the implementation
+of the List to LinkedList?
+
+The trimToSize function will no longer work because LinkedList does not have this method.
+You will also need to update all instances in the Storage class where variables of
+type ArrayList are created. Additionally, ensure that only LinkedList objects are
+saved to the file.
+
+Think about the method calls in main - does trimToSize() exist in LinkedList?
+
+No.
+
+Should Main know about what concrete type of List Storage provides?
+
+No, this is not necessary, actually it's not recommended.
